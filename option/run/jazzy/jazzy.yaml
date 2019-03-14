@@ -1,7 +1,0 @@
-author: Abyss
-author_url: http://rogerabyss.top
-github_url: https://github.com/RogerAbyss
-copyright: '© 2017 Abyss'
-xcodebuild_arguments: [-scheme, zgxlInternational]
-module: zgxlInternational
-clean: true

@@ -7,6 +7,7 @@ puts "\033[32m \n
 \n \033[0m"
 
 
+puts "\033[32m 请确认转移对应的ssh秘钥, 之后会开始自动下载git项目 \033[0m"
 system "sudo spctl --master-disable"
 # config = YAML.load_file(File.dirname(__FILE__)+'/config/config.yml')
 # if config["proxy"].length > 0
@@ -84,7 +85,6 @@ system "sudo spctl --master-disable"
 zshList = YAML.load_file(File.dirname(__FILE__)+'/config/zsh.yml')
 puts "\033[32m oh-my-zsh 安装 \033[0m"
 system "sh -c '$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)'"
-system "mkdir zsh"
 for item in zshList
     system "git clone #{item} ./zsh"
 end
