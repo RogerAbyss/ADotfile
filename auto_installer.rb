@@ -28,12 +28,12 @@ system "sudo spctl --master-disable"
 #     system "brew install #{item}"
 # end
 
-puts "\033[32m brew cask install \033[0m"
-caskList = YAML.load_file(File.dirname(__FILE__)+'/config/cask.yml')
-puts caskList
-for item in caskList
-    system "brew cask install #{item}"
-end
+# puts "\033[32m brew cask install \033[0m"
+# caskList = YAML.load_file(File.dirname(__FILE__)+'/config/cask.yml')
+# puts caskList
+# for item in caskList
+#     system "brew cask install #{item}"
+# end
 
 # puts "\033[32m 清理缓存 \033[0m"
 # system 'brew cleanup'
@@ -80,5 +80,13 @@ end
 #         system "conda install #{item}"
 #     end
 # end
+
+zshList = YAML.load_file(File.dirname(__FILE__)+'/config/zsh.yml')
+puts "\033[32m oh-my-zsh 安装 \033[0m"
+system "sh -c '$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)'"
+system "mkdir zsh"
+for item in zshList
+    system "git clone #{item} ./zsh"
+end
 
 # system "ruby ./installer.rb"
