@@ -82,15 +82,4 @@ puts "\033[32m \n
 #     end
 # }
 
-# system "ruby ./installer.rb"
-
-# system "
-# rvm_result=~/.rvm/scripts/rvm use 2.5.1
-# # echo $rvm_result
-# if [[ rvm_result =~ Using ]]
-# then
-#     echo 1
-# else
-#     echo 2
-# fi
-# "
+system "ruby ./installer.rb"

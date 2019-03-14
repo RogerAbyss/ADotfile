@@ -32,10 +32,16 @@ if gemList.length > 0
     system rvm_c
     system "source ~/.rvm/scripts/rvm"
     system "rvm use #{ruby_version} --default"
-    puts "\033[32m gem 升级 \033[0m"
-    system "gem update --system"
-    puts gemList
-    for item in gemList
-        system "gem install #{item}"
-    end
+
+    if [ -f "~/.rvm/gems/ruby-#{ruby_version}" ]
+        then
+            puts "\033[32m gem 升级 \033[0m"
+            system "gem update --system"
+            puts gemList
+            for item in gemList
+                system "gem install #{item}"
+            end
+        else
+            puts "stable变更, 请自行安装"
+    fi
 end
