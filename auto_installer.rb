@@ -7,7 +7,7 @@ puts "\033[32m \n
 \n \033[0m"
 
 # puts "\033[32m 请确认转移对应的ssh秘钥, 之后会开始自动下载git项目 \033[0m"
-# config = YAML.load_file(File.dirname(__FILE__)+'/config/config.yml')
+config = YAML.load_file(File.dirname(__FILE__)+'/config/config.yml')
 # if config["proxy"].length > 0
 #     puts config["proxy"]
 #     puts "\033[32m 使用代理#{config['proxy']} \033[0m"
@@ -60,7 +60,7 @@ if gemList.length > 0
     puts "\033[32m rvm 安装 \033[0m"
     system "curl -sSL https://rvm.io/mpapis.asc | gpg --import -"
     system "curl -sSL https://rvm.io/pkuczynski.asc | gpg --import -"
-    system "gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB"
+    system "gpg --keyserver #{config['ruby']['gpg']} --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB"
     system "curl -sSL https://get.rvm.io | bash -s #{config['ruby']['version']}"
     system "source ~/.rvm/script/rvm"
     system "rvm use #{config['ruby']['version']} --default"
