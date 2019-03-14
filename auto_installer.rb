@@ -57,13 +57,16 @@ config = YAML.load_file(File.dirname(__FILE__)+'/config/config.yml')
 
 gemList = YAML.load_file(File.dirname(__FILE__)+'/config/gem.yml')
 if gemList.length > 0
+    gpg = config['ruby']['gpg']
+    ruby_version = config['ruby']['version']
+
     puts "\033[32m rvm 安装 \033[0m"
     system "curl -sSL https://rvm.io/mpapis.asc | gpg --import -"
     system "curl -sSL https://rvm.io/pkuczynski.asc | gpg --import -"
-    system "gpg --keyserver #{config['ruby']['gpg']} --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB"
-    system "curl -sSL https://get.rvm.io | bash -s #{config['ruby']['version']}"
+    system "gpg --keyserver #{gpg} --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB"
+    system "curl -sSL https://get.rvm.io | bash -s #{ruby_version]}"
     system "source ~/.rvm/script/rvm"
-    system "rvm use #{config['ruby']['version']} --default"
+    system "rvm use #{ruby_version]} --default"
     puts "\033[32m gem 升级 \033[0m"
     system "gem update --system"
     # puts gemList
