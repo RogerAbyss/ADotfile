@@ -7,7 +7,7 @@ puts "\033[32m \n
 \n \033[0m"
 
 # puts "\033[32m 请确认转移对应的ssh秘钥, 之后会开始自动下载git项目 \033[0m"
-config = YAML.load_file(File.dirname(__FILE__)+'/config/config.yml')
+# config = YAML.load_file(File.dirname(__FILE__)+'/config/config.yml')
 # if config["proxy"].length > 0
 #     puts config["proxy"]
 #     puts "\033[32m 使用代理#{config['proxy']} \033[0m"
@@ -82,4 +82,15 @@ config = YAML.load_file(File.dirname(__FILE__)+'/config/config.yml')
 #     end
 # }
 
-system "ruby ./installer.rb"
+# system "ruby ./installer.rb"
+
+# system "
+# rvm_result=~/.rvm/scripts/rvm use 2.5.1
+# # echo $rvm_result
+# if [[ rvm_result =~ Using ]]
+# then
+#     echo 1
+# else
+#     echo 2
+# fi
+# "
