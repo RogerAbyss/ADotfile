@@ -2,8 +2,8 @@
 
 # git账户
 git:
-  - username: abyss
-  - email: roger_ren@qq.com
+  username: abyss
+  email: roger_ren@qq.com
 
 # 根据网络情况, 你可能需要命令行使用sock翻墙
 # http://127.0.0.1:1087

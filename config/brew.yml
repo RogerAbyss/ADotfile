@@ -1,21 +1,19 @@
 ---
 
 # 建议要有
-- coreutils
-- wget
-- git
-- ncdu
-- openssl
-- tree
-- xctool
-- automake
-- cmake
-- pkg-config
-- caskroom/cask/brew-cask
+# - coreutils
+# - wget
+# - git
+# - ncdu
+# - openssl
+# - tree
+# - xctool
+# - automake
+# - cmake
+# - pkg-config
+# - caskroom/cask/brew-cask
+# - nginx
 
 # 用户自定义
-- ruby
-- node
-- nginx
 # - go
 # - mysql
