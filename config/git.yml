@@ -1,6 +1,18 @@
 ---
 
-abyss: 
+abyss_public: 
   - https://github.com/RogerAbyss/stable.git
   - https://github.com/RogerAbyss/AGitBook.git
   - https://github.com/RogerAbyss/ADotfile.git
+  - https://github.com/RogerAbyss/RogerAbyss.github.io.git
+
+framework:
+  - https://github.com/RogerAbyss/AUpdater.git
+  - https://github.com/RogerAbyss/AFastlane.git
+  - https://github.com/RogerAbyss/ARouter.git
+
+# 私有仓库 需要放入ssh配置的key
+abyss:
+  # - git@gitee.com/rogerabyss/abyss-node.git
+  # - git@gitee.com:rogerabyss/Assert.git
+  # - git@gitee.com:rogerabyss/wx.git
