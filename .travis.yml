@@ -1,4 +1,6 @@
 os: osx
 osx_image: xcode10.1
 script:
-  - sh bootstrap.sh
+  # - ruby auto_installer.rb
+  # - sh bootstrap.sh
+  - sh -c "$(curl -fsSL https://raw.githubusercontent.com/RogerAbyss/ADotfile/master/bootstrap.sh)"
