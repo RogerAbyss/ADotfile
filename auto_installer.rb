@@ -86,7 +86,7 @@ zshList = YAML.load_file(File.dirname(__FILE__)+'/config/zsh.yml')
 puts "\033[32m oh-my-zsh 安装 \033[0m"
 system "sh -c '$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)'"
 for item in zshList
-    system "git clone #{item} ./zsh"
+    system "cd zsh&&git clone #{item}"
 end
 
 # system "ruby ./installer.rb"
