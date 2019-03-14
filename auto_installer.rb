@@ -7,7 +7,7 @@ puts "\033[32m \n
 \n \033[0m"
 
 
-# puts "\033[32m 7.允许任何软件  \033[0m"
+# puts "\033[32m 允许任何来源的软件(如果不需要可以注释掉这一句), 此次密码输入之后, 将会进入无人值守状态  \033[0m"
 # system "sudo spctl --master-disable"
 # puts "\033[32m 请确认转移对应的ssh秘钥, 之后会开始自动下载git项目 \033[0m"
 # config = YAML.load_file(File.dirname(__FILE__)+'/config/config.yml')
@@ -83,15 +83,15 @@ puts "\033[32m \n
 #     end
 # end
 
-zshList = YAML.load_file(File.dirname(__FILE__)+'/config/zsh.yml')
-puts "\033[32m oh-my-zsh 安装 \033[0m"
-system "sh -c '$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)'"
-for item in zshList
-    system "cd zsh&&git clone #{item}"
-end
+# zshList = YAML.load_file(File.dirname(__FILE__)+'/config/zsh.yml')
+# puts "\033[32m oh-my-zsh 安装 \033[0m"
+# system "sh -c '$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)'"
+# for item in zshList
+#     system "cd zsh&&git clone #{item}"
+# end
 
 gitMap = YAML.load_file(File.dirname(__FILE__)+'/config/git.yml')
-puts gitMap
+system "mkdir projects"
 gitMap.each{|key, list|
     system "cd projects&&mkdir #{key}"
     for item in list
