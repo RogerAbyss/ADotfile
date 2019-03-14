@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-if [ -f ~/dotfiles/auto_installer.rb ]
+if [ -f ~/ADotfile/auto_installer.rb ]
 then
     /usr/bin/ruby ./auto_installer.rb
 else

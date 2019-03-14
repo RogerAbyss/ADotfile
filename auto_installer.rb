@@ -58,19 +58,20 @@ puts "\033[32m \n
 #     end
 # end
 
-# gemList = YAML.load_file(File.dirname(__FILE__)+'/config/gem.yml')
-# if gemList.length > 0
-#     puts "\033[32m rvm 安装 \033[0m"
-#     system "curl -sSL https://get.rvm.io | bash -s stable"
-#     system "rvm use default"
-#     puts "\033[32m gem 升级 \033[0m"
-#     system "gem update --system"
+gemList = YAML.load_file(File.dirname(__FILE__)+'/config/gem.yml')
+if gemList.length > 0
+    puts "\033[32m rvm 安装 \033[0m"
+    system "curl -sSL https://get.rvm.io | bash -s stable"
+    system "bash --login"
+    system "rvm use default"
+    puts "\033[32m gem 升级 \033[0m"
+    system "gem update --system"
 
-#     puts gemList
-#     for item in gemList
-#         system "gem install #{item}"
-#     end
-# end
+    puts gemList
+    for item in gemList
+        system "gem install #{item}"
+    end
+end
 
 # condaList = YAML.load_file(File.dirname(__FILE__)+'/config/conda.yml')
 # if condaList.length > 0
@@ -90,13 +91,13 @@ puts "\033[32m \n
 #     system "cd zsh&&git clone #{item}"
 # end
 
-gitMap = YAML.load_file(File.dirname(__FILE__)+'/config/git.yml')
-system "mkdir projects"
-gitMap.each{|key, list|
-    system "cd projects&&mkdir #{key}"
-    for item in list
-        system "cd projects/#{key}&&git clone #{item}"
-    end
-}
+# gitMap = YAML.load_file(File.dirname(__FILE__)+'/config/git.yml')
+# system "mkdir projects"
+# gitMap.each{|key, list|
+#     system "cd projects&&mkdir #{key}"
+#     for item in list
+#         system "cd projects/#{key}&&git clone #{item}"
+#     end
+# }
 
-system "ruby ./installer.rb"
+# system "ruby ./installer.rb"

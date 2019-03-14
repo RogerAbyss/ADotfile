@@ -12,7 +12,7 @@ framework:
   - https://github.com/RogerAbyss/ARouter.git
 
 # 私有仓库 需要放入ssh配置的key
-abyss:
+# abyss:
   # - git@gitee.com/rogerabyss/abyss-node.git
   # - git@gitee.com:rogerabyss/Assert.git
   # - git@gitee.com:rogerabyss/wx.git
