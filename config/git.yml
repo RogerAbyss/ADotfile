@@ -1,7 +1,6 @@
 ---
 
-abyss:
-archieve:
-com:
-framework:
-out:
+abyss: 
+  - https://github.com/RogerAbyss/stable.git
+  - https://github.com/RogerAbyss/AGitBook.git
+  - https://github.com/RogerAbyss/ADotfile.git

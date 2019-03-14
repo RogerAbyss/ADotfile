@@ -7,8 +7,9 @@ puts "\033[32m \n
 \n \033[0m"
 
 
-puts "\033[32m 请确认转移对应的ssh秘钥, 之后会开始自动下载git项目 \033[0m"
-system "sudo spctl --master-disable"
+# puts "\033[32m 7.允许任何软件  \033[0m"
+# system "sudo spctl --master-disable"
+# puts "\033[32m 请确认转移对应的ssh秘钥, 之后会开始自动下载git项目 \033[0m"
 # config = YAML.load_file(File.dirname(__FILE__)+'/config/config.yml')
 # if config["proxy"].length > 0
 #     puts config["proxy"]
@@ -88,5 +89,14 @@ system "sh -c '$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master
 for item in zshList
     system "cd zsh&&git clone #{item}"
 end
+
+gitMap = YAML.load_file(File.dirname(__FILE__)+'/config/git.yml')
+puts gitMap
+gitMap.each{|key, list|
+    system "cd projects&&mkdir #{key}"
+    for item in list
+        system "cd projects/#{key}&&git clone #{item}"
+    end
+}
 
 # system "ruby ./installer.rb"
