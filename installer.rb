@@ -39,7 +39,7 @@ if gemList.length > 0
     then
         ruby ./gem.rb
     else
-        echo '安装失败(稳定版不再是预定版本), 请自行安装'
+        echo '安装失败(稳定版不再是预定版本, 或其他原因), 请自行安装'
     fi
     "
 end
