@@ -28,12 +28,12 @@ system "sudo spctl --master-disable"
 #     system "brew install #{item}"
 # end
 
-# puts "\033[32m brew cask install \033[0m"
-# caskList = YAML.load_file(File.dirname(__FILE__)+'/config/cask.yml')
-# puts caskList
-# for item in caskList
-#     system "brew cask install #{item}"
-# end
+puts "\033[32m brew cask install \033[0m"
+caskList = YAML.load_file(File.dirname(__FILE__)+'/config/cask.yml')
+puts caskList
+for item in caskList
+    system "brew cask install #{item}"
+end
 
 # puts "\033[32m 清理缓存 \033[0m"
 # system 'brew cleanup'
@@ -56,21 +56,19 @@ system "sudo spctl --master-disable"
 #     end
 # end
 
-gemList = YAML.load_file(File.dirname(__FILE__)+'/config/gem.yml')
-if gemList.length > 0
-    puts "\033[32m rvm 安装 \033[0m"
-    system "curl -sSL https://rvm.io/mpapis.asc | gpg --import -"
-    system "gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB"
-    system "curl -sSL https://get.rvm.io | bash -s stable"
-    system "rvm use default"
-    # puts "\033[32m gem 升级 \033[0m"
-    # system "gem update --system"
+# gemList = YAML.load_file(File.dirname(__FILE__)+'/config/gem.yml')
+# if gemList.length > 0
+#     puts "\033[32m rvm 安装 \033[0m"
+#     system "curl -sSL https://get.rvm.io | bash -s stable"
+#     system "rvm use default"
+#     puts "\033[32m gem 升级 \033[0m"
+#     system "gem update --system"
 
-    # puts gemList
-    # for item in gemList
-    #     system "gem install #{item}"
-    # end
-end
+#     puts gemList
+#     for item in gemList
+#         system "gem install #{item}"
+#     end
+# end
 
 # condaList = YAML.load_file(File.dirname(__FILE__)+'/config/conda.yml')
 # if condaList.length > 0
