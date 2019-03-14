@@ -10,5 +10,5 @@ git:
 proxy: ""
 ruby: 
   version: 2.6.0
-  # 经常失效...恶心
+  # 经常失效...恶心y
   gpg: "hkp://keys.gnupg.net"

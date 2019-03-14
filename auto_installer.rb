@@ -63,12 +63,16 @@ if gemList.length > 0
     puts "\033[32m rvm 安装 \033[0m"
     system "curl -sSL https://rvm.io/mpapis.asc | gpg --import -"
     system "curl -sSL https://rvm.io/pkuczynski.asc | gpg --import -"
-    system "gpg --keyserver #{gpg} --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB"
-    system "curl -sSL https://get.rvm.io | bash -s #{ruby_version}"
+    gpg_c = "gpg --keyserver #{gpg} --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB"
+    system gpg_c
+    puts gpg_c
+    rvm_c = "curl -sSL https://get.rvm.io | bash -s stable --ruby"
+    puts rvm_c
+    system rvm_c
     system "source ~/.rvm/script/rvm"
     system "rvm use #{ruby_version} --default"
-    puts "\033[32m gem 升级 \033[0m"
-    system "gem update --system"
+    # puts "\033[32m gem 升级 \033[0m"
+    # system "gem update --system"
     # puts gemList
     # for item in gemList
     #     system "gem install #{item}"
