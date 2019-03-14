@@ -7,6 +7,7 @@ puts "\033[32m \n
 \n \033[0m"
 
 
+system "sudo spctl --master-disable"
 config = YAML.load_file(File.dirname(__FILE__)+'/config/config.yml')
 # if config["proxy"].length > 0
 #     puts config["proxy"]
@@ -58,6 +59,7 @@ config = YAML.load_file(File.dirname(__FILE__)+'/config/config.yml')
 gemList = YAML.load_file(File.dirname(__FILE__)+'/config/gem.yml')
 if gemList.length > 0
     puts "\033[32m rvm 安装 \033[0m"
+    system "brew install gpg2"
     system "gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB"
     system "curl -sSL https://get.rvm.io | bash -s stable"
     system "rvm use default"
@@ -70,15 +72,15 @@ if gemList.length > 0
     end
 end
 
-condaList = YAML.load_file(File.dirname(__FILE__)+'/config/conda.yml')
-if condaList.length > 0
-    puts "\033[32m anaconda 安装 \033[0m"
-    system "brew cask install anaconda"
+# condaList = YAML.load_file(File.dirname(__FILE__)+'/config/conda.yml')
+# if condaList.length > 0
+#     puts "\033[32m anaconda 安装 \033[0m"
+#     system "brew cask install anaconda"
     
-    puts condaList
-    for item in condaList
-        system "conda install #{item}"
-    end
-end
+#     puts condaList
+#     for item in condaList
+#         system "conda install #{item}"
+#     end
+# end
 
-system "ruby ./installer.rb"
+# system "ruby ./installer.rb"

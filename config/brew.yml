@@ -13,6 +13,7 @@
 - pkg-config
 - caskroom/cask/brew-cask
 - nginx
+- gpg2
 
 # 用户自定义
 # - go
