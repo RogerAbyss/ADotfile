@@ -1,0 +1,48 @@
+# Email配置
+
+sender "492764029@qq.com"
+manager "roger_ren@qq.com"
+token "xfbjnudclefvbgei"
+action "更新历史"
+actionurl "#"
+reciver []
+
+for_lane :test do
+	reciver []
+	title ""
+	content ""
+	actionurl ""
+	code """
+	"""
+end
+
+for_lane :beta do
+	reciver []
+	title ""
+	content ""
+	actionurl ""
+	code """
+	"""
+end
+
+for_lane :release do
+	reciver []
+	title ""
+	content ""
+	actionurl ""
+	code """
+	"""
+end
+
+# "610447442@qq.com" 小春
+# "349470694@qq.com" 红卫
+# "15922883743@163.com" 倩哥
+# "498434576@qq.com" 高兴
+# "9134457@qq.com" 黄总
+# "13566403@qq.com"  白总
+# "1918130@qq.com" 潘叔叔
+# "9883886@qq.com" 石总
+# "miaozhen000@126.com" 苗总
+# 8742008@163.com 苏州公司
+# 张迪 1072354617@qq.com
+# 彭程 1748010130@qq.com

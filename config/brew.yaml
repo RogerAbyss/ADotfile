@@ -1,0 +1,17 @@
+---
+
+# 建议要有
+- coreutils
+- wget
+- git
+- ncdu
+- openssl
+- tree
+- caskroom/cask/brew-cask
+
+# 用户自定义
+- ruby
+- node
+- nginx
+# - go
+# - mysql

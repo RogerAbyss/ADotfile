@@ -1,0 +1,51 @@
+#!/usr/bin/env bash
+
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+# added by travis gem
+[ -f /Users/abyss/.travis/travis.sh ] && source /Users/abyss/.travis/travis.sh
+
+# ssh
+eval "$(ssh-agent -s)"
+ssh-add -K ~/.ssh/id_rsa
+
+# java version "11.0.2"
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk-11.0.2.jdk/Contents/Home
+export PATH=$JAVA_HOME/bin:$PATH
+
+# Android
+export ANDROID_HOME=/Users/abyss/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+
+# go stable 1.11.5 (bottled)
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
+export PATH=$PATH:/Users/abyss/go/bin
+
+# anacoda 4.4.4
+export PATH="/anaconda3/bin:$PATH"
+
+# flutter 1.0
+export PATH="/Users/abyss/flutter/bin:$PATH"
+
+# node 
+export PATH="/usr/local/bin:$PATH"
+
+# vscode use 'code' in command line
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
+# brew doctor
+export PATH="/usr/local/sbin:$PATH"
+
+# openssl 1.1
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+
+# rvm
+export PATH="$PATH:$HOME/.rvm/bin"
+
+# ruby 2.6.1p33
+export PATH="/usr/local/opt/ruby/bin:$PATH"
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"

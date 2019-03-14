@@ -1,0 +1,12 @@
+---
+  
+# 建议要有
+- cocoapods
+
+# 用户自定义
+- fastlane
+- email
+- fir-cli
+- xcpretty
+- jazzy
+- bundler

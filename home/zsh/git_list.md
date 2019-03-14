@@ -1,0 +1,3 @@
+- https://github.com/agnoster/agnoster-zsh-theme.git
+- https://github.com/powerline/fonts.git
+- https://github.com/altercation/solarized.git

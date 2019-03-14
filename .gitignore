@@ -1,0 +1,10 @@
+# 编辑器
+.idea
+.vscode
+
+# 系统相关
+.DS_Store
+._*
+Thumbs.db
+.Spotlight-V100
+.Trashes

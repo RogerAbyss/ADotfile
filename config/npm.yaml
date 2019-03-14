@@ -1,0 +1,10 @@
+---
+
+# 用户自定义
+- gitbook-cli
+- express-generator
+- '@tarojs/cli'
+- newman
+- newman-reporter-html
+- typescript
+- pm2
