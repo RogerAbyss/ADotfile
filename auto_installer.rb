@@ -8,7 +8,8 @@ puts "\033[32m \n
 
 
 config = YAML.load_file(File.dirname(__FILE__)+'/config/config.yml')
-if config['proxy'].length > 0
+if config["proxy"].length > 0
+    puts config["proxy"]
     puts "\033[32m 使用代理#{config['proxy']} \033[0m"
     system "exports export http_proxy=#{config['proxy']}"
     system "exports export https_proxy=#{config['proxy']}"

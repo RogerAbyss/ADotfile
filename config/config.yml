@@ -1,9 +1,10 @@
 ---
 
 # git账户
-- git:
+git:
   - username: abyss
   - email: roger_ren@qq.com
 
 # 根据网络情况, 你可能需要命令行使用sock翻墙
-- proxy: http://127.0.0.1:1087
+# http://127.0.0.1:1087
+proxy: 
