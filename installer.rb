@@ -11,4 +11,4 @@ puts "\033[32m 2.下载vscode, chrome浏览器同步插件和书签:\nhttps://co
 puts "\033[32m 3.从lastpass获取token, 从插件sync下载配置, 搜code配置命令行 \033[0m"
 puts "\033[32m 4.安装zsh命令行(./home), ssh自己备份过来 \033[0m"
 puts "\033[32m 5.nginx配置 \033[0m"
-puts "\033[32m 6.一些软件配置(./crash) \033[0m"
+puts "\033[32m 6.允许任何来源,安装一些软件(./crash):\nsudo spctl --master-disable\n \033[0m"
