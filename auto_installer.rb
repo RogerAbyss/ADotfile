@@ -37,27 +37,28 @@ config = YAML.load_file(File.dirname(__FILE__)+'/config/config.yml')
 # puts "\033[32m 清理缓存 \033[0m"
 # system 'brew cleanup'
 
-puts "\033[32m 设置git#{config['git']} \033[0m"
-system "git config --global user.name #{config['git']['username']}"
-system "git config --global user.email=#{config['git']['email']}"
+# puts "\033[32m 设置git#{config['git']} \033[0m"
+# system "git config --global user.name #{config['git']['username']}"
+# system "git config --global user.email=#{config['git']['email']}"
 
-npmList = YAML.load_file(File.dirname(__FILE__)+'/config/npm.yml')
-if npmList.length > 0
-    puts "\033[32m nvm 安装 \033[0m"
-    system "curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
-    "
-    system "nvm install stable"
-    system "npm install -g npm"
+# npmList = YAML.load_file(File.dirname(__FILE__)+'/config/npm.yml')
+# if npmList.length > 0
+#     puts "\033[32m nvm 安装 \033[0m"
+#     system "curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
+#     "
+#     system "nvm install stable"
+#     system "npm install -g npm"
 
-    puts npmList
-    for item in npmList
-        system "npm install -g #{item}"
-    end
-end
+#     puts npmList
+#     for item in npmList
+#         system "npm install -g #{item}"
+#     end
+# end
 
 gemList = YAML.load_file(File.dirname(__FILE__)+'/config/gem.yml')
 if gemList.length > 0
     puts "\033[32m rvm 安装 \033[0m"
+    system "gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB"
     system "curl -sSL https://get.rvm.io | bash -s stable"
     system "rvm use default"
     puts "\033[32m gem 升级 \033[0m"
@@ -70,13 +71,13 @@ if gemList.length > 0
 end
 
 condaList = YAML.load_file(File.dirname(__FILE__)+'/config/conda.yml')
-if caskList.length > 0
+if condaList.length > 0
     puts "\033[32m anaconda 安装 \033[0m"
     system "brew cask install anaconda"
     
     puts condaList
     for item in condaList
-        system "gem install #{item}"
+        system "conda install #{item}"
     end
 end
 
