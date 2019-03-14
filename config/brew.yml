@@ -7,6 +7,10 @@
 - ncdu
 - openssl
 - tree
+- xctool
+- automake
+- cmake
+- pkg-config
 - caskroom/cask/brew-cask
 
 # 用户自定义
