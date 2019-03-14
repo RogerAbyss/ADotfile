@@ -82,4 +82,4 @@ config = YAML.load_file(File.dirname(__FILE__)+'/config/config.yml')
 #     end
 # }
 
-# system "ruby ./installer.rb"
+system "ruby ./installer.rb"

@@ -12,8 +12,9 @@ puts "\033[32m 3.从lastpass获取token, 从插件sync下载配置, 搜code配�
 puts "\033[32m 4.安装zsh命令行(./home), ssh自己备份过来 \033[0m"
 puts "\033[32m 5.nginx配置 \033[0m"
 puts "\033[32m 6.允许任何来源,安装一些软件(./crash):\nsudo spctl --master-disable\n \033[0m"
-puts "\033[32m 以下安装有可能出错, 如有问题请自行安装 \033[0m"
 
+
+puts "\033[32m 在手动的同时, 以下安装有可能出错, 如有问题请自行安装 \033[0m"
 gemList = YAML.load_file(File.dirname(__FILE__)+'/config/gem.yml')
 if gemList.length > 0
     gpg = config['ruby']['gpg']
