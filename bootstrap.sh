@@ -4,8 +4,8 @@ if [ -f ~/ADotfile/auto_installer.rb ]
 then
     echo "git pull.."
     cd ~/ADotfile&&/usr/bin/git pull
-    /usr/bin/ruby ~/ADotfile/auto_installer.rb
+    /usr/bin/ruby ~/ADotfile/auto_installer.rb $1
 else
     /usr/bin/git clone https://github.com/RogerAbyss/ADotfile.git ~/ADotfile
-    cd ~/ADotfile&&sh bootstrap.sh
+    cd ~/ADotfile&&sh bootstrap.sh travis
 fi
