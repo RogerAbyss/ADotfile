@@ -30,8 +30,6 @@ if gemList.length > 0
     puts rvm_c
     system rvm_c
     system "source ~/.rvm/scripts/rvm"
-    system "echo '[[ -s '$HOME/.rvm/scripts/rvm' ]] && . '$HOME/.rvm/scripts/rvm'' >>~/.bashrc"
-    system "source ~/.bashrc"
     system "rvm use default"
 
     system"
