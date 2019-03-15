@@ -6,6 +6,7 @@
 osascript -e 'tell application "System Preferences" to quit'
 
 # Ask for the administrator password upfront
+echo "开始更改一些系统设置, 需要sudo权限(之后长时间将是自动的)"
 sudo -v
 
 # Keep-alive: update existing `sudo` time stamp until `.macos` has finished

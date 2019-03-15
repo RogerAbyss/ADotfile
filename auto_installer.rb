@@ -85,4 +85,4 @@ system "sh ./macos.sh"
 #     end
 # }
 
-system "ruby ./installer.rb"
+# system "ruby ./installer.rb"
