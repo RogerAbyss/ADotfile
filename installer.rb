@@ -19,7 +19,6 @@ config = YAML.load_file(File.dirname(__FILE__)+'/config/config.yml')
 gemList = YAML.load_file(File.dirname(__FILE__)+'/config/gem.yml')
 if gemList.length > 0
     gpg = config['ruby']['gpg']
-    ruby_version = config['ruby']['version']
 
     puts "\033[32m rvm 安装 \033[0m"
     system "curl -sSL https://rvm.io/mpapis.asc | gpg --import -"
@@ -31,11 +30,12 @@ if gemList.length > 0
     puts rvm_c
     system rvm_c
     system "source ~/.rvm/scripts/rvm"
-    system "rvm use #{ruby_version} --default"
+    system "echo '[[ -s '$HOME/.rvm/scripts/rvm' ]] && . '$HOME/.rvm/scripts/rvm'' >>~/.bashrc"
+    system "source ~/.bashrc"
+    system "rvm use default"
 
     system"
-    ver=#{ruby_version}
-    if [ -d ~/.rvm/gems/ruby-$ver ]
+    if [ -d ~/.rvm/gems ]
     then
         ruby ./gem.rb
     else

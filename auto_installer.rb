@@ -7,6 +7,9 @@ puts "\033[32m \n
 \n \033[0m"
 
 # puts "\033[32m 请确认转移对应的ssh秘钥, 之后会开始自动下载git项目 \033[0m"
+# puts "\033[32m 开始设置系统 \033[0m"
+system ".macos.sh"
+
 # config = YAML.load_file(File.dirname(__FILE__)+'/config/config.yml')
 # if config["proxy"].length > 0
 #     puts config["proxy"]

@@ -9,6 +9,4 @@ git:
 # http://127.0.0.1:1087
 proxy: ""
 ruby: 
-  version: 2.6.0
-  # 经常失效...恶心y
   gpg: "hkp://keys.gnupg.net"
