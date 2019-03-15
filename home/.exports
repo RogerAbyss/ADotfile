@@ -3,9 +3,6 @@
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-# added by travis gem
-[ -f /Users/abyss/.travis/travis.sh ] && source /Users/abyss/.travis/travis.sh
-
 # ssh
 eval "$(ssh-agent -s)"
 ssh-add -K ~/.ssh/id_rsa
@@ -18,21 +15,6 @@ export PATH=$JAVA_HOME/bin:$PATH
 export ANDROID_HOME=/Users/abyss/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 
-# go stable 1.11.5 (bottled)
-export PATH=$PATH:/usr/local/opt/go/libexec/bin
-export PATH=$PATH:/Users/abyss/go/bin
-
-# anacoda 4.4.4
-# for "conda activate 不能使用path"
-# export PATH="/anaconda3/bin:$PATH"
-. /anaconda3/etc/profile.d/conda.sh
-
-# flutter 1.0
-export PATH="/Users/abyss/flutter/bin:$PATH"
-
-# node 
-export PATH="/usr/local/bin:$PATH"
-
 # vscode use 'code' in command line
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
@@ -42,12 +24,5 @@ export PATH="/usr/local/sbin:$PATH"
 # openssl 1.1
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 
-# rvm
-export PATH="$PATH:$HOME/.rvm/bin"
-
-# ruby 2.6.1p33
-export PATH="/usr/local/opt/ruby/bin:$PATH"
-
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+# 启动会很慢, 可以单独使用'se'激活额外的环境
+# source ./extras

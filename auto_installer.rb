@@ -87,4 +87,4 @@ gitMap.each{|key, list|
     end
 }
 
-system "ruby ./installer.rb"
+system "ruby ./installer.rb #{ARGV[0]}"

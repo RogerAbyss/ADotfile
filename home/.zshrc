@@ -4,8 +4,6 @@
 # Abyss
 source $HOME/.aliases
 source $HOME/.exports
-source $HOME/.rvm/scripts/rvm
-conda activate base
 
 ## sock5 http agent
 ## 如果不使用, 记得注释

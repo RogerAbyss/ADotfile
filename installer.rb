@@ -31,12 +31,18 @@ if gemList.length > 0
     system rvm_c
     system "source ~/.rvm/scripts/rvm"
 
-    puts "请使用下面命令, 切换ruby环境。\n是否已经完成?[y/n]\nrvm use default\n"
-    selection=gets.strip
+    if ARGV[0] != "travis"
+        puts "请使用下面命令, 切换ruby环境。\n是否已经完成?[y/n]\nrvm use default\n"
+        selection=gets.strip
 
-    if selection == 'y'
-        ruby ./gem.rb
-    else
-        puts "你可以下来, 完成版本的切换之后手动执行\nruby ./gem.rb\n"
+        if selection == 'y'
+            ruby ./gem.rb
+        else
+            puts "你可以下来, 完成版本的切换之后手动执行\nruby ./gem.rb\n"
+        end
     end
+
+    # java需要输入密码放到最后, 算是基础环境了
+    puts "安装jre环境, 默认是最新环境, 可以取消自己安装!"
+    system "brew install java"
 end

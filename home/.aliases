@@ -10,6 +10,7 @@ alias sudo='sudo '
 alias reload="exec ${SHELL} -l"
 alias path='echo -e ${PATH//:/\\n}'
 alias zshconfig='code ~/.zshrc'
+alias se='source ~/.extras'
 
 # AFastlane
 alias podupda='pod update --verbose --no-repo-update'
