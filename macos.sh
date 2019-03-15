@@ -103,3 +103,5 @@ defaults write com.apple.dock wvous-tr-modifier -int 0
 # # Bottom right screen corner → Start screen saver
 # defaults write com.apple.dock wvous-br-corner -int x
 # defaults write com.apple.dock wvous-br-modifier -int 0
+
+echo "修改配置完毕, 你需要重启查看效果"
