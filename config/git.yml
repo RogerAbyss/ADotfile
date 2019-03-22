@@ -11,6 +11,14 @@ framework:
   - https://github.com/RogerAbyss/AFastlane.git
   - https://github.com/RogerAbyss/ARouter.git
 
+opensource:
+  - https://github.com/github/gitignore
+
+zsh:
+  - https://github.com/agnoster/agnoster-zsh-theme.git
+  - https://github.com/powerline/fonts.git
+  - https://github.com/altercation/solarized.git
+
 # 私有仓库 需要放入ssh配置的key
 # abyss:
   # - git@gitee.com/rogerabyss/abyss-node.git
