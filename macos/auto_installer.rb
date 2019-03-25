@@ -12,7 +12,7 @@ if ARGV[0] != "travis"
     system "sh ./macos/macos.sh"
 end
 
-config = YAML.load_file(dirname(File.dirname(__FILE__))+'/config/config.yml')
+config = YAML.load_file(File.dirname(File.dirname(__FILE__))+'/config/config.yml')
 if config["proxy"].length > 0
     puts config["proxy"]
     puts "\033[32m 使用代理#{config['proxy']} \033[0m"
