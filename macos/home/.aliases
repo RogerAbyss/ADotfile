@@ -11,6 +11,8 @@ alias reload="exec ${SHELL} -l"
 alias path='echo -e ${PATH//:/\\n}'
 alias zshconfig='code ~/.zshrc'
 alias se='source ~/.extras'
+alias net='netstat -AaLlnW'
+alias gp='ps -ef | grep'
 
 # AFastlane
 alias podupda='pod update --verbose --no-repo-update'

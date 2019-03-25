@@ -1,23 +1,45 @@
 ---
 
 abyss_public: 
-  - https://github.com/RogerAbyss/stable.git
-  - https://github.com/RogerAbyss/AGitBook.git
-  - https://github.com/RogerAbyss/ADotfile.git
-  - https://github.com/RogerAbyss/RogerAbyss.github.io.git
+  # 个人文档-GitBook
+  - git@github.com:RogerAbyss/AGitBook.git
+  # Mac一键重装-MacSystemDotfile
+  - git@github.com:RogerAbyss/ADotfile.git
+  # 个人主页-Github Pages
+  - git@github.com:RogerAbyss/RogerAbyss.github.io.git
+  # Docker
+  - git@github.com:RogerAbyss/ADocker.git
+  # App 原生自动构建
+  - git@github.com:RogerAbyss/AFastlane.git
 
+private:
+  # Pod私有仓库
+  - git@gitee.com:rogerabyss/myrepo.git
+  # 华硕B85Pro+GTX960+V31230 黑苹果EFI
+  - git@github.com:RogerAbyss/AHacktoish.git
+  # zgxl证书仓库
+  - git@gitee.com:rogerabyss/PPMatchRelease.git
+  # 个人服务器 - node
+  - git@gitee.com:rogerabyss/abyss-node.git
+  # 资源仓库 - Asserts
+  - git@gitee.com:rogerabyss/Assert.git
+  # 微信小程序 - Lrene
+  - git@gitee.com:rogerabyss/wx.git
+
+# 常用静态库
 framework:
-  - https://github.com/RogerAbyss/AUpdater.git
-  - https://github.com/RogerAbyss/AFastlane.git
-  - https://github.com/RogerAbyss/ARouter.git
+  - git@github.com:RogerAbyss/AUpdater.git
+  - git@github.com:RogerAbyss/ARouter.git
 
 opensource:
-  - https://github.com/github/gitignore
+  # git忽略
+  - git@github.com:github/gitignore.git
 
+# zsh相关
 zsh:
-  - https://github.com/agnoster/agnoster-zsh-theme.git
-  - https://github.com/powerline/fonts.git
-  - https://github.com/altercation/solarized.git
+  - git@github.com:agnoster/agnoster-zsh-theme.git
+  - git@github.com:powerline/fonts.git
+  - git@github.com:altercation/solarized.git
 
 # 私有仓库 需要放入ssh配置的key
 # abyss:
