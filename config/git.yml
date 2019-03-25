@@ -40,9 +40,3 @@ zsh:
   - git@github.com:agnoster/agnoster-zsh-theme.git
   - git@github.com:powerline/fonts.git
   - git@github.com:altercation/solarized.git
-
-# 私有仓库 需要放入ssh配置的key
-# abyss:
-  # - git@gitee.com/rogerabyss/abyss-node.git
-  # - git@gitee.com:rogerabyss/Assert.git
-  # - git@gitee.com:rogerabyss/wx.git

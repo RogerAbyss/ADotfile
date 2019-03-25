@@ -15,8 +15,8 @@ puts "\033[32m 6.允许任何来源,安装一些软件(./crash):\nsudo spctl --m
 
 
 puts "\033[32m 在手动的同时, 以下安装有可能出错, 如有问题请自行安装 \033[0m"
-config = YAML.load_file(File.dirname(__FILE__)+'/config/config.yml')
-gemList = YAML.load_file(File.dirname(__FILE__)+'/config/gem.yml')
+config = YAML.load_file(File.dirname(File.dirname(__FILE__))+'/config/config.yml')
+gemList = YAML.load_file(File.dirname(File.dirname(__FILE__))+'/config/gem.yml')
 if gemList.length > 0
     gpg = config['ruby']['gpg']
 
