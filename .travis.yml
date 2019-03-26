@@ -3,4 +3,4 @@ osx_image: xcode10.1
 script:
   # - ruby auto_installer.rb
   # - sh bootstrap.sh travis
-  - sh -c "$(curl -fsSL https://raw.githubusercontent.com/RogerAbyss/ADotfile/master/bootstrap.sh)
+  - sh -c "$(curl -fsSL https://raw.githubusercontent.com/RogerAbyss/ADotfile/master/bootstrap.sh)" travis
