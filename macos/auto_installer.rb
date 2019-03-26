@@ -6,14 +6,15 @@ puts "\033[32m \n
 ==============================
 \n \033[0m"
 
- system "cp -af macos/home/ ~/"
- system "ls -a ~/"
-
  puts "\033[32m 请确认转移对应的ssh秘钥文件 \033[0m"
  if ARGV[0] != "travis"
      puts "\033[32m 开始设置系统 \033[0m"
      system "sh ./macos/macos.sh"
  end
+
+system "sh -c '$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)'"
+system "cp -af macos/home/ ~/"
+system "ls -a ~/"
 
  config = YAML.load_file(File.dirname(File.dirname(__FILE__))+'/config/config.yml')
  if config["proxy"].length > 0

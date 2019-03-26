@@ -12,7 +12,7 @@ source $HOME/.exports
 # export https_proxy='http://127.0.0.1:1087'
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/abyss/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.

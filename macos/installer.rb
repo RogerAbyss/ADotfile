@@ -46,4 +46,7 @@ if gemList.length > 0
     # java需要输入密码放到最后, 算是基础环境了
     puts "安装jre环境, 默认是最新环境, 可以取消自己安装!"
     system "brew cask install java"
+    
+    puts "切换zsh"
+    system "chsh -s /bin/zsh"
 end
