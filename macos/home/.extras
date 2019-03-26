@@ -1,16 +1,15 @@
 #!/usr/bin/env bash
 
 source $HOME/.rvm/scripts/rvm
-conda activate base
 
 # go stable 1.11.5 (bottled)
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 export PATH=$PATH:/Users/abyss/go/bin
 
-# anacoda 4.4.4
-# for "conda activate 不能使用path"
-# export PATH="/anaconda3/bin:$PATH"
-. /anaconda3/etc/profile.d/conda.sh
+# anacoda
+export PATH="/usr/local/anaconda3/bin:$PATH"
+. /usr/local/anaconda3/etc/profile.d/conda.sh
+conda activate base
 
 # flutter 1.0
 export PATH="/Users/abyss/flutter/bin:$PATH"
@@ -20,7 +19,7 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # added by travis gem
 [ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh

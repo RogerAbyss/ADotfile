@@ -13,8 +13,7 @@ puts "\033[32m \n
  end
 
 system "sh -c '$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)'"
-system "cp -af macos/home/ ~/"
-system "ls -a ~/"
+system "sh ./macos/zsh.sh"
 
  config = YAML.load_file(File.dirname(File.dirname(__FILE__))+'/config/config.yml')
  if config["proxy"].length > 0
