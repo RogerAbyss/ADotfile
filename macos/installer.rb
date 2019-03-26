@@ -37,6 +37,7 @@ if gemList.length > 0
 
         if selection == 'y'
             system "ruby ./gem.rb"
+            system "pod repo update"
         else
             puts "你可以下来, 完成版本的切换之后手动执行\nruby ./gem.rb\n"
         end
@@ -44,5 +45,8 @@ if gemList.length > 0
 
     # java需要输入密码放到最后, 算是基础环境了
     puts "安装jre环境, 默认是最新环境, 可以取消自己安装!"
-    system "brew install java"
+    system "brew cask install java"
+    
+    puts "切换zsh"
+    system "chsh -s /bin/zsh"
 end
