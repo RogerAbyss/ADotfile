@@ -1,6 +1,0 @@
-- [ ] proxy
-- [ ] git bug
-- [ ] pod setup
-- [ ] vscode
-- [ ] node
-- [ ] cnpm
