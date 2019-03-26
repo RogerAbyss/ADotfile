@@ -14,7 +14,8 @@
 - caskroom/cask/brew-cask
 - nginx
 - gnupg
-- maven
+- mvnvm
+- node
 
 # 用户自定义
 # - go
