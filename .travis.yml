@@ -1,4 +1,5 @@
 os: osx
 osx_image: xcode10.1
 script:
-  - sh bootstrap.sh travis
+  # - sh bootstrap.sh travis
+  - sh -c "$(curl -fsSL https://raw.githubusercontent.com/RogerAbyss/ADotfile/master/bootstrap.sh)" travis
