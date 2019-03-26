@@ -36,7 +36,7 @@ if gemList.length > 0
         selection=gets.strip
 
         if selection == 'y'
-            ruby ./gem.rb
+            system "ruby ./gem.rb"
             system "pod repo update"
         else
             puts "你可以下来, 完成版本的切换之后手动执行\nruby ./gem.rb\n"
