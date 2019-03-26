@@ -6,7 +6,7 @@ puts "\033[32m \n
 ==============================
 \n \033[0m"
 
-system "cp -rf ./macos/home/* ~/"
+system "cp -af macos/home/ ~/"
 system "ls -a ~/"
 
 puts "\033[32m 请确认转移对应的ssh秘钥文件 \033[0m"
