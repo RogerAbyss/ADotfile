@@ -4,7 +4,7 @@ abyss_public:
   # 个人文档-GitBook
   - git@github.com:RogerAbyss/AGitBook.git
   # Mac一键重装-MacSystemDotfile
-  - git@github.com:RogerAbyss/ADotfile.git
+  # - git@github.com:RogerAbyss/ADotfile.git
   # 个人主页-Github Pages
   - git@github.com:RogerAbyss/RogerAbyss.github.io.git
   # Docker
