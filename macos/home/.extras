@@ -2,7 +2,7 @@
 
 source $HOME/.rvm/scripts/rvm
 
-# go stable 1.11.5 (bottled)
+# go version go1.12.1 darwin/amd64
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 export PATH=$PATH:/Users/abyss/go/bin
 
