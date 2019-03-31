@@ -12,7 +12,7 @@ alias path='echo -e ${PATH//:/\\n}'
 alias zshconfig='code ~/.zshrc'
 alias se='source ~/.extras'
 alias net='netstat -AaLlnW'
-alias gp='ps -ef | grep'
+alias psgrep='ps -ef | grep'
 
 # AFastlane
 alias podupda='pod update --verbose --no-repo-update'
