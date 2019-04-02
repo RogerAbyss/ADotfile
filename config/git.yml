@@ -4,7 +4,7 @@ abyss_public:
   # 个人文档-GitBook
   - git@github.com:RogerAbyss/AGitBook.git
   # Mac一键重装-MacSystemDotfile
-  # - git@github.com:RogerAbyss/ADotfile.git
+  - git@github.com:RogerAbyss/ADotfile.git
   # 个人主页-Github Pages
   - git@github.com:RogerAbyss/RogerAbyss.github.io.git
   # Docker
@@ -40,3 +40,19 @@ zsh:
   - git@github.com:agnoster/agnoster-zsh-theme.git
   - git@github.com:powerline/fonts.git
   - git@github.com:altercation/solarized.git
+
+
+# 以下为私人fork项目, 防止一天停止维护
+# fork:
+#   - git@github.com:RogerAbyssWorld/JrebelBrainsLicenseServerforJava.git
+#   - git@github.com:RogerAbyssWorld/WeChatPlugin-MacOS.git
+#   - git@github.com:RogerAbyssWorld/QQPlugin-macOS.git
+#   - git@github.com:RogerAbyssWorld/WeChatPlugin-iOS.git
+#   - git@github.com:RogerAbyssWorld/slshim.git
+##  私人框架(Objective-C)
+#   - git@gitee.com:rogerabyss/AFramework.git
+#   - git@gitee.com:rogerabyss/AModule.git
+#   - git@gitee.com:rogerabyss/ALauncher.git
+#   - git@gitee.com:rogerabyss/AExtension.git
+#   - git@gitee.com:rogerabyss/ANetWork.git
+#   - git@gitee.com:rogerabyss/ADebug.git
