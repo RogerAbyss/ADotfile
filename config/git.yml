@@ -49,6 +49,9 @@ zsh:
 #   - git@github.com:RogerAbyssWorld/QQPlugin-macOS.git
 #   - git@github.com:RogerAbyssWorld/WeChatPlugin-iOS.git
 #   - git@github.com:RogerAbyssWorld/slshim.git
+#   - git@github.com:RogerAbyssWorld/Pock.git
+#   - git@github.com:RogerAbyssWorld/kubeasz.git
+#   - git@gitee.com:abyssroger/jetbrains-agent.git
 ##  私人框架(Objective-C)
 #   - git@gitee.com:rogerabyss/AFramework.git
 #   - git@gitee.com:rogerabyss/AModule.git
