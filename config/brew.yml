@@ -14,8 +14,10 @@
 - caskroom/cask/brew-cask
 - nginx
 - gnupg
-- mvnvm
+- maven
 - node
+- fd
+- carthage
 
 # 用户自定义
 # - go
