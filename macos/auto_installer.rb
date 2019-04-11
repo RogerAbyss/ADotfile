@@ -12,8 +12,6 @@ puts "\033[32m \n
      system "sh ./macos/macos.sh"
  end
 
-system "sh -c '$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)'"
-system "sh ./macos/zsh.sh"
 
  config = YAML.load_file(File.dirname(File.dirname(__FILE__))+'/config/config.yml')
  if config["proxy"].length > 0
@@ -84,5 +82,10 @@ system "sh ./macos/zsh.sh"
          end
      }
  end
+
+ # ??好像没有执行成功
+ system "sh -c '$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)'"
+ # 需要在git下载之后
+ system "sh ./macos/zsh.sh"
 
  system "ruby ./macos/installer.rb #{ARGV[0]}"
